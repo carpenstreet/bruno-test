@@ -1,0 +1,15 @@
+meta {
+  name: / (목록)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ZEUS_URL}}/acon/asset-products
+  body: none
+  auth: none
+}
+
+headers {
+  X-Acon-Currency: KRW
+}

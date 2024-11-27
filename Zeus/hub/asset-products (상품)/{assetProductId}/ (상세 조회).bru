@@ -1,0 +1,56 @@
+meta {
+  name: / (상세 조회)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ZEUS_URL}}/hub/asset-products/{{ASSET_PRODUCT_ID}}
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+      "brandId": "{{BRAND_ID}}",
+      "regions": ["KR", "US"],
+      "title": "세번째 상품",
+      "price": 3000.00,
+      "content": "세번째 상품 내용 수정11",
+      "assetIds": ["{{ASSET_ID}}"],
+      "licenses": ["PERSONAL", "LIMITED1", "UNLIMITED"],
+      "units": [
+          {
+              "assetIds": ["{{ASSET_ID}}"],
+              "license": "PERSONAL",
+              "price": 0
+          },
+          {
+              "assetIds": ["{{ASSET_ID}}"],
+              "license": "LIMITED1",
+              "price": 1000.00
+          },
+          {
+              "assetIds": ["{{ASSET_ID}}"],
+              "license": "UNLIMITED",
+              "price": 100000.00
+          }
+      ],
+      "image": {
+          "ids": ["{{ASSET_PRODUCT_IMAGE_ID}}"],
+          "main": "{{ASSET_PRODUCT_IMAGE_ID}}"
+      },
+      "applicationIds": [1, 2, 3],
+      "extensionIds": [77, 78, 79],
+      "category": {
+          "ids": ["{{CATEGORY_NODE_ID}}"],
+          "main": "{{CATEGORY_NODE_ID}}"
+      },
+      "copyright": {
+          "isOriginal": true,
+          "warehouseSources": "안녕하세요",
+          "commercialSources": "안녕히계세요",
+          "hasRealLogo": "YES"
+      }
+  }
+}

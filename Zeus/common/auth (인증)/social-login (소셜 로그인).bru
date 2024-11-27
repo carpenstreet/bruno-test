@@ -1,0 +1,22 @@
+meta {
+  name: /social-login (소셜 로그인)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ZEUS_URL}}/auth/social-login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "provider": "kakao",
+    "token": "token"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("USER_TOKEN", res.body. token);
+}

@@ -1,0 +1,15 @@
+meta {
+  name: /image (상품 이미지 업로드)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ZEUS_URL}}/hub/asset-product/image
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/Users/max/Documents/스크린샷 2024-10-22 16.06.55.png)
+}

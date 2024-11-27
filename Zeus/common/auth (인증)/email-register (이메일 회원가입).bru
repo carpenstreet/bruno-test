@@ -1,7 +1,7 @@
 meta {
-  name: email-register
+  name: /email-register (이메일 회원가입)
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
@@ -10,21 +10,20 @@ post {
   auth: bearer
 }
 
-headers {
-  Accept: application/json
-  Content-Type: application/json
-}
-
 auth:bearer {
   token: {{USER_TOKEN}}
 }
 
 body:json {
   {
-      "email": "max@acon3d.com",
-      "password": "1q2w3e4r!!",
+      "email": "{{MY_EMAIL}}",
+      "password": "{{MY_PASSWORD}}",
       "name": "testss",
       "phoneNumber": "+82 10-3918-4444"
   }
   
+}
+
+script:post-response {
+  bru.setEnvVar("USER_TOKEN", res.body. token);
 }

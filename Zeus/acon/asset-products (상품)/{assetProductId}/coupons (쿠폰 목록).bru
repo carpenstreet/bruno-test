@@ -1,0 +1,15 @@
+meta {
+  name: /coupons (쿠폰 목록)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ZEUS_URL}}/acon/asset-products/{{ASSET_PRODUCT_ID}}/coupons
+  body: none
+  auth: none
+}
+
+headers {
+  X-Acon-Currency: KRW
+}

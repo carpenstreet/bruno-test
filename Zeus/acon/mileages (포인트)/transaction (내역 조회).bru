@@ -1,0 +1,15 @@
+meta {
+  name: /transaction (내역 조회)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ZEUS_URL}}/acon/mileages/transaction
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Acon-Currency: KRW
+}

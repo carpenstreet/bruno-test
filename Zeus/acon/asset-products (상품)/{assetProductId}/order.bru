@@ -1,0 +1,28 @@
+meta {
+  name: /order
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ZEUS_URL}}/acon/asset-products/{{ASSET_PRODUCT_ID}}/order
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-Acon-Language: ko
+  X-Acon-Region: KR
+  X-Acon-Currency: KRW
+}
+
+body:json {
+  {
+    "revisionId": "{{ASSET_PRODUCT_REVISION_ID}}",
+    "units": [
+      {
+        "id": "{{ASSET_PRODUCT_UNIT_ID}}"
+      }
+    ]
+  }
+}

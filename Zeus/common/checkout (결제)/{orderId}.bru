@@ -1,0 +1,22 @@
+meta {
+  name: {orderId}
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ZEUS_URL}}/checkout/{{ORDER_ID}}/complete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "payment": {
+          "pg": "fake",
+          "method": "CARD",
+          "amount": "103000",
+          "action": true
+      }
+  }
+}

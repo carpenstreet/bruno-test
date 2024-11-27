@@ -1,0 +1,18 @@
+meta {
+  name: /
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ZEUS_URL}}/acon/members/apply
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "phoneNumber": "+82 10-3918-4444",
+      "jobCategory": 1
+  }
+}

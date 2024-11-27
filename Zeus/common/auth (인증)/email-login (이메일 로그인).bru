@@ -1,0 +1,22 @@
+meta {
+  name: /email-login (이메일 로그인)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ZEUS_URL}}/auth/email-login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{MY_EMAIL}}",
+    "password": "{{MY_PASSWORD}}"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("USER_TOKEN", res.body. token);
+}

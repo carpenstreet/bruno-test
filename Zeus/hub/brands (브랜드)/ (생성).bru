@@ -1,0 +1,17 @@
+meta {
+  name: / (생성)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ZEUS_URL}}/hub/brands
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "first brand"
+  }
+}

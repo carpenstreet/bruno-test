@@ -1,0 +1,15 @@
+meta {
+  name: / (변경)
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{ZEUS_URL}}/hub/assets/{{ASSET_ID}}
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/Users/max/Documents/테스트 에셋/clay-banks-7sSTRzNAKuA-unsplash.jpg)
+}

@@ -1,0 +1,24 @@
+meta {
+  name: /social-register (소셜 회원가입)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ZEUS_URL}}/auth/social-register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "max2@acon3d.com",
+    "name": "max2",
+    "provider": "kakao",
+    "token": "token"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("USER_TOKEN", res.body. token);
+}

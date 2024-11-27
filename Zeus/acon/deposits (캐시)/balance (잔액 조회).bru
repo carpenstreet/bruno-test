@@ -1,0 +1,15 @@
+meta {
+  name: /balance (잔액 조회)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ZEUS_URL}}/acon/deposits/balance
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Acon-Currency: KRW
+}

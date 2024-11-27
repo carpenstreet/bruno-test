@@ -1,0 +1,18 @@
+meta {
+  name: / (삭제)
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{ZEUS_URL}}/categories/{{CATEGORY_ID}}/nodes/{{CATEGORY_NODE_ID}}
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "parentId": "019365d9-aa3a-7c7a-8713-84b66ebe84b6", //이동 할 부모 categoryNodeId
+    "position": 0 //순서
+  }
+}

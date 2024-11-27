@@ -1,0 +1,30 @@
+meta {
+  name: / (조회(계보 확인용))
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{ZEUS_URL}}/categories/{{CATEGORY_ID}}/nodes/{{CATEGORY_NODE_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  // 부모가 없는 경우
+  //{
+  //  "name": [{
+  //      "lang": "ko",
+  //      "text": "abcd1"
+  //  }],
+  //}
+  
+  //부모가 있는 경우
+  {
+    "name": [{
+        "lang": "ko",
+        "text": "abcd1"
+    }],
+    "parentId": "{{PARENT_CATEGORY_NODE_ID}}"
+  }
+}

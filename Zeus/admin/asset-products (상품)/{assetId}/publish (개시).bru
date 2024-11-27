@@ -1,0 +1,11 @@
+meta {
+  name: /publish (개시)
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{ZEUS_URL}}/admin/asset-products/{{ASSET_PRODUCT_ID}}/publish
+  body: none
+  auth: inherit
+}

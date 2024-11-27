@@ -1,0 +1,17 @@
+meta {
+  name: / (수정)
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{ZEUS_URL}}/categories/{{CATEGORY_ID}}/nodes/{{CATEGORY_NODE_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "이름 변경"
+  }
+}
