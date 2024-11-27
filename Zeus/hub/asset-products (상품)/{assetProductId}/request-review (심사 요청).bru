@@ -1,0 +1,32 @@
+meta {
+  name: /request-review (심사 요청)
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{ZEUS_URL}}/hub/asset-products/{{ASSET_PRODUCT_ID}}/request-review
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "message": "test"
+  }
+}
+
+body:multipart-form {
+  message: 등록 신청합니다.
+}
+
+docs {
+  # 성공
+  ```json
+  
+  ```
+  
+  # 실패
+  
+  
+}

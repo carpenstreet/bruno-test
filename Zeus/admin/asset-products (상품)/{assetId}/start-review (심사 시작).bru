@@ -1,0 +1,15 @@
+meta {
+  name: /start-review (심사 시작)
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{ZEUS_URL}}/admin/asset-products/{{ASSET_PRODUCT_ID}}/start-review
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  message: 심사를 시작합니다.
+}

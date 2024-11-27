@@ -12,19 +12,19 @@ post {
 
 body:json {
   // 부모가 없는 경우
+  {
+    "name": [{
+      "lang": "ko",
+      "text": "abcd1"
+    }]
+  }
+  
+  //부모가 있는 경우
   //{
   //  "name": [{
   //      "lang": "ko",
   //      "text": "abcd1"
   //  }],
+  //  "parentId": "{{PARENT_CATEGORY_NODE_ID}}"
   //}
-  
-  //부모가 있는 경우
-  {
-    "name": [{
-        "lang": "ko",
-        "text": "abcd1"
-    }],
-    "parentId": "{{PARENT_CATEGORY_NODE_ID}}"
-  }
 }
