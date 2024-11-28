@@ -1,0 +1,15 @@
+meta {
+  name: /reject-review (심사 거절)
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{ZEUS_URL}}/admin/asset-products/{{ASSET_PRODUCT_ID}}/reject-review
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  message: 심사를 거절합니다.
+}
